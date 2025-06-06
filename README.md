@@ -17,12 +17,11 @@ This is a project similar to [oracle_javacard_sdks](https://github.com/martinpal
 git submodule add https://github.com/ibaibing/globalplatform-apis.git sdks/gpapis
 ```
 
-
-2.Edit the ant Build.xml in your project
+2. Edit the ant Build.xml in your project
 ```xml
 <target name="build">
     <javacard jckit="sdks/jcsdks/jc320v24.1_kit">
-        <cap aid=" 54657374506B67" version="1.0" sources="src" ints="true" strip="true" debug="true" verify="true">
+        <cap aid="54657374506B67" version="1.0" sources="src" ints="true" strip="true" debug="true" verify="true">
             <applet class="id.example.Applet" aid="5465737441707000" />
             <import exps="sdks/gpapis/CORE/1.5/exports" jar="sdks/gpapis/CORE/1.5/gpapi-globalplatform.jar"/>
         </cap>

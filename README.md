@@ -1,5 +1,5 @@
 # GlobalPlatform-APIs
-This is a project similar to [oracle_javacard_sdks](https://github.com/martinpaljak/oracle_javacard_sdks.git) and [globalplatform-exports](https://github.com/OpenJavaCard/globalplatform-exports.git), collect and organize all API materials for SE released by GlobalPlatfrom.
+This is a project similar to [oracle_javacard_sdks](https://github.com/martinpaljak/oracle_javacard_sdks.git) and [globalplatform-exports](https://github.com/OpenJavaCard/globalplatform-exports.git), collect and organize all API materials for SmartCard or SE released by GlobalPlatfrom.
 
 - As found from https://globalplatform.org and https://github.com/OpenJavaCard/globalplatform-exports.git
 - All content is &copy;&reg;&trade; by GlobalPlatform, and they may be used only as per the provided [license agreement](GP-Specification-License-Agreement.pdf)[This file is from [globalplatform-exports](https://github.com/OpenJavaCard/globalplatform-exports.git)].
@@ -31,7 +31,9 @@ git submodule add https://github.com/ibaibing/globalplatform-apis.git sdks/gpapi
 
 
 
-## Acknowledgment
+## Acknowledgments
+
+We would like to thank:
 
 - https://globalplatform.org/specs-library/
 - https://github.com/OpenJavaCard/globalplatform-exports.git

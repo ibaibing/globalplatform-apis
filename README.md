@@ -12,14 +12,13 @@ This is a project similar to [oracle_javacard_sdks](https://github.com/martinpal
 
 ## Usage
 
+1. Add a Git submodule to your project
 ```bat
 git submodule add https://github.com/ibaibing/globalplatform-apis.git sdks/gpapis
 ```
 
 
-
-## Config Build.xml
-
+2.Edit the ant Build.xml in your project
 ```xml
 <target name="build">
     <javacard jckit="sdks/jcsdks/jc320v24.1_kit">

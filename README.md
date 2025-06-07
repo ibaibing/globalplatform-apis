@@ -12,7 +12,7 @@ This is a project similar to [oracle_javacard_sdks](https://github.com/martinpal
 
 ## Usage
 
-1. You can find [BUILD WITH ANT JAVACARD](BUILD WITH ANT JAVACARD) to know how to build JavaCard Applet with Ant-JavaCard
+1. You can find [BUILD WITH ANT JAVACARD](BUILD WITH ANT JAVACARD.md) to know how to build JavaCard Applet with Ant-JavaCard
 1. Add a Git submodule to your project
 ```bat
 git submodule add https://github.com/ibaibing/globalplatform-apis.git sdks/gpapis

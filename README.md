@@ -12,25 +12,26 @@ This is a project similar to [oracle_javacard_sdks](https://github.com/martinpal
 
 ## Usage
 
-1. You can find [BUILD WITH ANT JAVACARD](BUILD%20WITH%20ANT%20JAVACARD.md) to know how to build JavaCard Applet with Ant-JavaCard
-1. Add a Git submodule to your project
-```bat
-git submodule add https://github.com/ibaibing/globalplatform-apis.git sdks/gpapis
-```
+1. You can find the demo project [building-javacard-applet](https://github.com/ibaibing/building-javacard-applet.git) to know how to build JavaCard Applet with Ant-JavaCard.
 
-2. Edit the ant Build.xml in your project
+1. Add a Git submodule to your project.
+
+   ```bash
+   git submodule add https://github.com/ibaibing/globalplatform-apis.git sdks/gpapis
+   ```
+
+1. Edit the ant Build.xml in your project
 ```xml
-<target name="build">
+target name="build">
     <javacard jckit="sdks/jcsdks/jc320v24.1_kit">
         <cap aid="54657374506B67" version="1.0" sources="src" ints="true" strip="true" debug="true" verify="true">
             <applet class="id.example.Applet" aid="5465737441707000" />
+            <!--Add GP API here-->
             <import exps="sdks/gpapis/CORE/1.5/exports" jar="sdks/gpapis/CORE/1.5/gpapi-globalplatform.jar"/>
         </cap>
     </javacard>
 </target>
 ```
-
-
 
 ## Acknowledgments
 

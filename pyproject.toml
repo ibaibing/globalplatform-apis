@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpapis"
+dynamic = ["version"]
+description = "GlobalPlatform API specifications and binaries for SmartCard/Secure Element development"
+readme = "README.md"
+authors = [
+    {name = "ibaibing", email = "ibaibing@outlook.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GlobalPlatform Specification License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries :: Java Libraries",
+]
+requires-python = ">=3.6"
+license = {text = "GlobalPlatform Specification License"}
+
+[project.urls]
+Homepage = "https://github.com/ibaibing/globalplatform-apis"
+Repository = "https://github.com/ibaibing/globalplatform-apis"
+
+[tool.setuptools.packages.find]
+include = ["gpapis*"]
+
+[tool.setuptools.package-data]
+gpapis = ["BROKER/**/*", "CONTACTLESS/**/*", "CORE/**/*", "OPEN/**/*", "SCPP/**/*", "UPGRADE/**/*"]

@@ -7,10 +7,35 @@ This is a project similar to [oracle_javacard_sdks](https://github.com/martinpal
 - Only necessary binary content usable with [ant-javacard](https://github.com/martinpaljak/ant-javacard).
 - Easily usable with platforms other than Windows.
 - Intended to be included as a Git submodule.
+- Now available as a pip-installable Python package for easy integration.
 
 
 
 ## Usage
+
+### Pip Installation (New!)
+
+Install the package directly using pip:
+
+```bash
+pip install gpapis
+```
+
+After installation, you can access the GlobalPlatform APIs from Python:
+
+```python
+import gpapis
+
+# List all available API resources
+apis = gpapis.get_all_resources()
+print(apis)
+
+# Get a specific API resource
+resource_path = gpapis.get_api_resource('core', '1.8', 'gpapi-globalplatform.jar')
+print(f"API JAR path: {resource_path}")
+```
+
+### Git Submodule Usage (Traditional)
 
 1. You can find the demo project [building-javacard-applet](https://github.com/ibaibing/building-javacard-applet.git) to know how to build JavaCard Applet with Ant-JavaCard.
 

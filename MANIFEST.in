@@ -1,0 +1,11 @@
+include README.md
+include setup.py
+include pyproject.toml
+include GP-Specification-License-Agreement.pdf
+recursive-include gpapis *.py
+recursive-include BROKER *
+recursive-include CONTACTLESS *
+recursive-include CORE *
+recursive-include OPEN *
+recursive-include SCPP *
+recursive-include UPGRADE *

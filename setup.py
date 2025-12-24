@@ -81,7 +81,7 @@ setup(
     version=get_version(),
     author="ibaibing",
     author_email="ibaibing@outlook.com",
-    description="GlobalPlatform API specifications and binaries for SmartCard/Secure Element development",
+    description="GlobalPlatform API specifications and binaries for SmartCard/Secure Element development (GitHub distribution only - not available on PyPI)",
     long_description=open("README.md").read() if os.path.exists("README.md") else "",
     long_description_content_type="text/markdown",
     url="https://github.com/ibaibing/globalplatform-apis",

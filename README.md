@@ -7,18 +7,24 @@ This is a project similar to [oracle_javacard_sdks](https://github.com/martinpal
 - Only necessary binary content usable with [ant-javacard](https://github.com/martinpaljak/ant-javacard).
 - Easily usable with platforms other than Windows.
 - Intended to be included as a Git submodule.
-- Now available as a pip-installable Python package for easy integration.
+- Now available as a pip-installable Python package from GitHub for easy integration.
 
 
 
 ## Usage
 
-### Pip Installation (New!)
+### Pip Installation from GitHub (New!)
 
-Install the package directly using pip:
+Install the package directly from GitHub using pip:
 
 ```bash
-pip install gpapis
+pip install git+https://github.com/ibaibing/globalplatform-apis.git
+```
+
+Or download the wheel file from the [Releases](https://github.com/ibaibing/globalplatform-apis/releases) page and install it directly:
+
+```bash
+pip install gpapis-*.whl
 ```
 
 After installation, you can access the GlobalPlatform APIs from Python:

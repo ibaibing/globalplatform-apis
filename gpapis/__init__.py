@@ -7,7 +7,7 @@ for SmartCard/Secure Element development.
 __version__ = "1.0.0"
 
 import os
-import pkg_resources
+import importlib.resources
 from pathlib import Path
 
 
@@ -26,8 +26,9 @@ def get_api_resource(api_type, version, filename):
     try:
         # Construct the resource path in the gpapis subdirectory
         resource_path = f"{api_type}/{version}/{filename}"
-        # Use pkg_resources to get the resource
-        return pkg_resources.resource_filename('gpapis', resource_path)
+        # Use importlib.resources to get the resource
+        with importlib.resources.path('gpapis', resource_path) as resource_file:
+            return str(resource_file)
     except Exception:
         # Fallback to relative path if resource is not found
         return os.path.join(os.path.dirname(__file__), api_type, version, filename)
@@ -46,7 +47,12 @@ def list_api_versions(api_type):
     try:
         # Get the directory listing for the API type
         resource_path = f"{api_type}/"
-        return pkg_resources.resource_listdir('gpapis', resource_path)
+        # Use importlib.resources to list directory contents
+        if hasattr(importlib.resources, 'files'):  # Python 3.9+
+            files = importlib.resources.files('gpapis').joinpath(resource_path).iterdir()
+            return [item.name for item in files if item.is_dir()]
+        else:  # Python 3.8 and earlier
+            return importlib.resources.contents('gpapis')
     except Exception:
         # Fallback to file system if resource is not found
         api_dir = os.path.join(os.path.dirname(__file__), api_type)
